@@ -1,0 +1,9 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#stream {
+	width: 640px;
+	height: 480px;
+}

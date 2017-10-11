@@ -13,14 +13,5 @@ socket.on('connect', () => {
 
 socket.on('data', data => {
 	console.log(data);
-	const rawImageData = {
-		data,
-		width,
-		height,
-	};
-	const jpegImageData = jpeg.encode(rawImageData, 75);
-	const blob = new Blob([new Uint8Array(jpegImageData.data)]);
-	const reader = new FileReader();
-	reader.onload = e => (image.src = e.target.result);
-	reader.readAsDataURL(blob);
+	image.src = `data:image/jpeg;base64,${data}`;
 });

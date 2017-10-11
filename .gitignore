@@ -3,3 +3,4 @@ node_modules
 cfg
 data
 yolo.weights
+detected.jpg
